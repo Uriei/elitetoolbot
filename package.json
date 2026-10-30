@@ -14,7 +14,7 @@
     "rollback": "node ./scripts/rollback.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "description": "",
   "dependencies": {
     "date-fns": "^4.1.0",
