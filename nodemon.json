@@ -1,0 +1,10 @@
+{
+  "verbose": true,
+  "ext": "ts",
+  "exec": "tsc && node ./dist/app.js",
+  "execMap": {
+    "ts": "tsc"
+  },
+  "watch": ["src/**/*"],
+  "signal": "SIGHUP"
+}

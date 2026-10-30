@@ -1,0 +1,35 @@
+{
+  "name": "elite_toolbot",
+  "version": "1.0.0",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "postbuild": "copyfiles ./package.json ./package-lock.json ./.env ./dist",
+    "prestart": "npm run build",
+    "start": "node ./dist/app.js",
+    "watch": "nodemon",
+    "clean": "rimraf ./dist",
+    "predeploy": "npm run build -- --sourceMap false",
+    "deploy": "node ./scripts/deploy.js",
+    "rollback": "node ./scripts/rollback.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "discord.js": "^14.19.2",
+    "dotenv": "^16.5.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.19.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.16",
+    "@types/node": "^22.15.4",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.11",
+    "rimraf": "^6.0.1",
+    "ssh-deploy-release": "^4.0.1",
+    "typescript": "^5.8.3"
+  }
+}
